@@ -245,11 +245,11 @@ button {
 }
 
 .services__box:hover .services__box__img-2 {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .services__box:hover .services__box__img-3 {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
 }
 
 .services__box:hover .services__box__img-4 {
@@ -536,6 +536,7 @@ button {
 
 .counters__center_card:active {
   transform: scale(1.7);
+  box-shadow: 15px 15px 15px #000000;
 }
 
 .counters__center_card-1 {
