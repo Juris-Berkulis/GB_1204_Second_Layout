@@ -386,6 +386,217 @@ button {
 
 .our_latest_projects {
   height: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our_latest_projects__title {
+  margin-top: 61px;
+  margin-bottom: 18px;
+}
+
+.our_latest_projects__paragraph {
+  margin-bottom: 35px;
+  width: 802px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
+
+.our_latest_projects__buttons_box {
+  width: 590px;
+  height: 32px;
+  margin-bottom: 69px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.our_latest_projects__buttons_box__button {
+  width: 120px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  align-items: center;
+  text-align: center;
+  color: #8c8c8c;
+  cursor: pointer;
+  transition: background 0.5s linear, color 0.5s linear;
+}
+
+.our_latest_projects__buttons_box__button:hover {
+  background: #998575;
+  color: #ffffff;
+}
+
+.our_latest_projects__buttons_box__button-1 {
+  width: 70px;
+}
+
+.our_latest_projects__cards_box {
+  width: 1170px;
+  height: 743px;
+  margin-bottom: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.our_latest_projects__cards_box__card {
+  width: 370px;
+  height: 337px;
+  background: #fbfaf8;
+  cursor: zoom-in;
+  z-index: 1;
+  transition: background 0.8s linear 0.2s, transform 0.4s linear,
+    z-index 1s linear;
+}
+
+.our_latest_projects__cards_box__card:hover {
+  background: #352f2d;
+}
+
+.our_latest_projects__cards_box__card:active {
+  transform: scale(2);
+  z-index: 900;
+  cursor: zoom-out;
+}
+
+.our_latest_projects__cards_box__card__spec {
+  position: relative;
+}
+
+.our_latest_projects__cards_box__card__spec__img {
+  display: block;
+  margin-bottom: 26px;
+}
+
+.our_latest_projects__cards_box__card__spec__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #352f2d99;
+  transform-origin: center top;
+  transition-duration: 0.2s;
+  transform: scaleY(0);
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__spec__overlay {
+  transform: scaleY(1);
+}
+
+.our_latest_projects__cards_box__card:active
+  .our_latest_projects__cards_box__card__spec__overlay {
+  transform: scaleY(0);
+}
+
+.our_latest_projects__cards_box__card__spec__overlay__button {
+  background-color: transparent;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transform-origin: center center;
+  transition-duration: 0.8s;
+  transition-delay: 0.2s;
+  transform: scaleY(0);
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__spec__overlay__button {
+  transform: scaleY(1);
+}
+
+.our_latest_projects__cards_box__card:active
+  .our_latest_projects__cards_box__card__spec__overlay__button {
+  transform: scaleY(0);
+}
+
+.our_latest_projects__cards_box__card__spec__overlay__button__enlarge {
+  color: #352f2d99;
+  font-size: 60px;
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.19, 1.95, 0.73, -1.05);
+  transition-delay: 1s;
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__spec__overlay__button__enlarge {
+  color: #ffffff;
+}
+
+.our_latest_projects__cards_box__card__title_mini {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #c7b299;
+  margin-bottom: 8px;
+  padding: 0 23px;
+  transition-property: color;
+  transition-duration: 0.8s;
+  transition-delay: 0.2s;
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__title_mini {
+  color: #ffffff;
+}
+
+.our_latest_projects__cards_box__card__paragraph {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #d1d1d1;
+  text-align: left;
+  padding: 0 23px;
+  transition-property: color;
+  transition-duration: 0.8s;
+  transition-delay: 0.2s;
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__paragraph {
+  color: #c7b299;
+}
+
+.our_latest_projects__button_bottom {
+  cursor: pointer;
+  background: #988574;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 19px 46px 18px;
+  box-sizing: border-box;
+  transition: transform 0.3s linear, background 0.2s linear, color 0.2s linear;
+}
+
+.our_latest_projects__button_bottom:hover {
+  transform: scale(1.5);
+  background: #ffffff;
+  color: #988574;
+}
+
+.our_latest_projects__button_bottom:active {
+  position: relative;
+  top: 5px;
 }
 
 .video_presentation {
