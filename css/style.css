@@ -511,6 +511,7 @@ button {
   height: 337px;
   background: #fbfaf8;
   cursor: zoom-in;
+  position: relative;
   z-index: 1;
   transition: background 0.8s linear 0.2s, transform 0.4s linear,
     z-index 1s linear;
@@ -630,6 +631,19 @@ button {
   color: #c7b299;
 }
 
+.our_latest_projects__cards_box__card__triangle {
+  fill: #fbfaf8;
+  position: absolute;
+  bottom: 99px;
+  left: 17px;
+  transition: fill 0.8s linear 0.2s;
+}
+
+.our_latest_projects__cards_box__card:hover
+  .our_latest_projects__cards_box__card__triangle {
+  fill: #352f2d;
+}
+
 .our_latest_projects__button_bottom {
   cursor: pointer;
   background: #988574;
@@ -703,12 +717,14 @@ button {
   margin-bottom: 18px;
   font-weight: 500;
   color: #ffffff;
+  animation: color-change 8s infinite;
 }
 
 .video_presentation__center__paragraph {
   margin-bottom: 18px;
   font-weight: 300;
   color: #ffffff;
+  animation: color-change 8s infinite;
 }
 
 .video_presentation__center__time {
@@ -1065,7 +1081,25 @@ button {
 }
 
 .partners__box__img:hover {
-  transform: scale(2);
+  transform: scale(1.7);
+  cursor: pointer;
+}
+
+.partners__box__img:active {
+  cursor: grabbing;
+  animation: deg-change 2s infinite;
+}
+
+@keyframes deg-change {
+  0% {
+    transform: rotateY(0deg) scale(1.7);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.7);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1.7);
+  }
 }
 
 .footer__top {
@@ -1147,6 +1181,40 @@ button {
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+}
+
+.footer__top__wrapper__column__title-spec:hover {
+  animation: color-change 8s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #ffffff;
+  }
+  12.5% {
+    color: red;
+  }
+  25% {
+    color: orange;
+  }
+  37.5% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  62.5% {
+    color: cyan;
+  }
+  75% {
+    color: blue;
+  }
+  87.5% {
+    color: blueviolet;
+  }
+  100% {
+    color: #ffffff;
+  }
 }
 
 .footer__top__wrapper__column__post-mes {
