@@ -71,6 +71,7 @@ button {
   background-size: 100%;
   background-position: center top;
   padding-top: 39px;
+  position: relative;
 }
 
 .header__head {
@@ -145,6 +146,7 @@ button {
   width: 569px;
   height: 239px;
   text-align: center;
+  margin-bottom: 312px;
 }
 
 .header__text__title_header {
@@ -187,6 +189,58 @@ button {
   top: 5px;
 }
 
+.header__buttons_box {
+  width: 95px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header__buttons_box__button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 2.5px;
+  cursor: pointer;
+}
+
+.header__buttons_box__button:hover {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 1px solid #d3c1ad;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header__slider_button {
+  position: absolute;
+  top: 451px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.header__slider_button-left {
+  left: 268px;
+}
+
+.header__slider_button-right {
+  right: 268px;
+}
+
+.header__slider_button__img {
+  fill: #ffffff;
+  opacity: 0.5;
+}
+
+.header__slider_button:hover .header__slider_button__img {
+  fill: #d3c1ac;
+}
+
 .services {
   height: 296px;
   padding-top: 84px;
@@ -209,14 +263,17 @@ button {
   align-items: center;
   justify-content: flex-end;
   cursor: pointer;
-  transition: transform 0.2s linear, border 0.1s linear 0.01s;
+  transition: transform 0.2s linear, border 0.1s linear 0.01s,
+    z-index 0.2s linear;
   background-color: #ffffff;
   border: 1px solid transparent;
+  z-index: 1;
 }
 
 .services__box:hover {
   transform: scale(1.5, 1.5);
   border: 1px solid #000000;
+  z-index: 900;
 }
 
 .services__box__img {
@@ -804,6 +861,185 @@ button {
 
 .recent_posts {
   height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recent_posts__title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.recent_posts__paragraph {
+  margin-bottom: 30px;
+  width: 770px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.recent_posts__cards_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.recent_posts__cards_box__card {
+  width: 370px;
+  height: 395px;
+  border: 1px solid #b3b3b3;
+  box-sizing: border-box;
+  background: transparent;
+  transition: background 0.8s linear 0.2s;
+}
+
+.recent_posts__cards_box__card:hover {
+  background: #352f2d;
+}
+
+.recent_posts__cards_box__card__spec {
+  position: relative;
+}
+
+.recent_posts__cards_box__card__spec__img {
+  width: 368px;
+  height: 219px;
+  display: block;
+  margin-bottom: 31px;
+}
+
+.recent_posts__cards_box__card__spec__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.2s linear;
+}
+
+.recent_posts__cards_box__card:hover
+  .recent_posts__cards_box__card__spec__overlay {
+  background-color: #352f2d99;
+}
+
+.recent_posts__cards_box__card__spec__overlay__calendar {
+  width: 50px;
+  height: 59px;
+  margin-top: 17px;
+  margin-left: 23px;
+}
+
+.recent_posts__cards_box__card__spec__overlay__calendar__number {
+  background: #363636;
+  border-radius: 3px;
+  height: 35px;
+  transition: background 0.8s linear 0.2s;
+}
+
+.recent_posts__cards_box__card:hover
+  .recent_posts__cards_box__card__spec__overlay__calendar__number {
+  background: #c7b199;
+}
+
+.recent_posts__cards_box__card__spec__overlay__calendar__number__text {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 37px;
+  padding: 3px 6px;
+}
+
+.recent_posts__cards_box__card__spec__overlay__calendar__month {
+  background: #242424;
+  border-radius: 0px 0px 3px 3px;
+  height: 24px;
+  transition: background 0.8s linear 0.2s;
+}
+
+.recent_posts__cards_box__card:hover
+  .recent_posts__cards_box__card__spec__overlay__calendar__month {
+  background: #a48d71;
+}
+
+.recent_posts__cards_box__card__spec__overlay__calendar__month__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 5px 13px;
+}
+
+.recent_posts__cards_box__card__title_mini {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  color: #555555;
+  margin-bottom: 22px;
+  margin-left: 25px;
+  transition: color 0.8s linear 0.2s;
+}
+
+.recent_posts__cards_box__card:hover
+  .recent_posts__cards_box__card__title_mini {
+  color: #c7b299;
+}
+
+.recent_posts__cards_box__card__paragraph {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 17px;
+  margin-left: 25px;
+  transition: color 0.8s linear 0.2s;
+}
+
+.recent_posts__cards_box__card:hover .recent_posts__cards_box__card__paragraph {
+  color: #ffffff;
+}
+
+.recent_posts__cards_box__card__know_more {
+  width: 90px;
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent_posts__cards_box__card__know_more__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  color: #c7b299;
+}
+
+.recent_posts__cards_box__card__know_more__img {
+  fill: #c7b299;
+}
+
+.recent_posts__navi {
+  width: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent_posts__navi__button {
+  fill: #d1d1d1;
+  cursor: pointer;
+  transition: fill 0.2s linear;
+}
+
+.recent_posts__navi__button:hover {
+  fill: #c7b299;
 }
 
 .partners {
@@ -891,6 +1127,16 @@ button {
 .footer__top__wrapper__column__link:hover {
   color: #0000ff;
   text-decoration: underline;
+}
+
+.footer__top__wrapper__column__link__triangle {
+  fill: #d1d1d1;
+  margin-left: 7px;
+}
+
+.footer__top__wrapper__column__link:hover
+  .footer__top__wrapper__column__link__triangle {
+  fill: #0000ff;
 }
 
 .footer__top__wrapper__column__title {
