@@ -66,9 +66,10 @@ button {
 
 .header {
   height: 985px;
+  background-color: #c7b299;
   background-image: url(../img/bg_header.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center top;
   padding-top: 39px;
   position: relative;
@@ -225,11 +226,11 @@ button {
 }
 
 .header__slider_button-left {
-  left: 268px;
+  left: calc((100% - 1284px) / 2 * 15 / 24 + 3px);
 }
 
 .header__slider_button-right {
-  right: 268px;
+  right: calc((100% - 1284px) / 2 * 15 / 24 + 3px);
 }
 
 .header__slider_button__img {
@@ -262,7 +263,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: transform 0.2s linear, border 0.1s linear 0.01s,
     z-index 0.2s linear;
   background-color: #ffffff;
@@ -270,7 +271,8 @@ button {
   z-index: 1;
 }
 
-.services__box:hover {
+.services__box:active {
+  cursor: zoom-out;
   transform: scale(1.5, 1.5);
   border: 1px solid #000000;
   z-index: 900;
@@ -294,7 +296,7 @@ button {
 }
 
 .services__box__img-4 {
-  transition: transform 0.5s linear, fill 0.5s linear;
+  transition: transform 1s linear, fill 1s linear;
 }
 
 .services__box:hover .services__box__img-1 {
@@ -310,7 +312,53 @@ button {
 }
 
 .services__box:hover .services__box__img-4 {
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
+}
+
+.services__box:active .services__box__img-1,
+.services__box:active .services__box__img-2,
+.services__box:active .services__box__img-4 {
+  animation: rotation-of-icons-1-2-4 1s infinite linear;
+}
+
+@keyframes rotation-of-icons-1-2-4 {
+  0% {
+    transform: rotateY(0deg);
+    fill: #c7b299;
+  }
+  50% {
+    transform: rotateY(180deg);
+    fill: #555555;
+  }
+  100% {
+    transform: rotateY(360deg);
+    fill: #c7b299;
+  }
+}
+
+.services__box:active .services__box__img-3 {
+  animation: rotation-of-icons-3 1s infinite linear;
+}
+
+@keyframes rotation-of-icons-3 {
+  0% {
+    transform: rotate(0deg);
+    fill: #c7b299;
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+    fill: #555555;
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+    fill: #c7b299;
+  }
 }
 
 .services__box__title_mini {
@@ -522,7 +570,7 @@ button {
 }
 
 .our_latest_projects__cards_box__card:active {
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: 900;
   cursor: zoom-out;
 }
@@ -672,9 +720,10 @@ button {
 
 .video_presentation {
   height: 705px;
+  background-color: #c7b299;
   background-image: url(../img/bg_video_presentation.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
   display: flex;
   justify-content: center;
@@ -1061,9 +1110,10 @@ button {
 
 .partners {
   height: 489px;
+  background-color: #c7b299;
   background-image: url(../img/bg_partners.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: right center;
 }
 
