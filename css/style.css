@@ -634,7 +634,7 @@ button {
 .our_latest_projects__cards_box__card__triangle {
   fill: #fbfaf8;
   position: absolute;
-  bottom: 99px;
+  bottom: 98px;
   left: 17px;
   transition: fill 0.8s linear 0.2s;
 }
@@ -821,6 +821,7 @@ button {
 .counters__center_card:active {
   transform: scale(1.7);
   box-shadow: 15px 15px 15px #000000;
+  cursor: zoom-out;
 }
 
 .counters__center_card-1 {
@@ -1269,6 +1270,15 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin-left: 15px;
+}
+
+.footer__down__wrapper__paragraph {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #555555;
+  margin-top: 58px;
+  margin-right: 25px;
 }
 
 .footer__down__wrapper__link {
