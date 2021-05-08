@@ -1417,6 +1417,10 @@ button {
     margin-bottom: 67px;
   }
 
+  .services__box:active {
+    transform: scale(1.1, 1.1);
+  }
+
   .waxom_is_realization {
     height: auto;
   }
@@ -1454,6 +1458,10 @@ button {
 
   .our_latest_projects__cards_box__card {
     margin-bottom: 42px;
+  }
+
+  .our_latest_projects__cards_box__card:active {
+    transform: scale(1.1);
   }
 
   .video_presentation {
@@ -1510,6 +1518,11 @@ button {
 
   .recent_posts__title {
     margin-top: 0;
+  }
+
+  .partners__box__img {
+    width: 150px;
+    height: auto;
   }
 
   .footer__top {
@@ -1591,12 +1604,8 @@ button {
   }
 
   .partners__box__img {
-    margin: 0 auto;
-  }
-
-  .partners__box__img {
     width: 105px;
-    height: auto;
+    margin: 0 auto;
   }
 }
 
@@ -1637,6 +1646,10 @@ button {
   .purchase_now__center__text__paragraph {
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  .counters__center_card {
+    margin: 0 20px;
   }
 
   .recent_posts__cards_box__card {
@@ -1716,6 +1729,12 @@ button {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 0;
+  }
+
+  .counters__center_card:active {
+    transform: scale(1.25);
+    box-shadow: 11px 11px 11px #000000;
   }
 
   .counters__center_card-1,
@@ -1968,5 +1987,19 @@ button {
   .purchase_now__center__text__paragraph {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+@media (max-width: 225px) {
+  .our_latest_projects__cards_box__card:active {
+    transform: scale(1.05);
+  }
+
+  .partners {
+    padding: 20px;
+  }
+
+  .partners__box__img {
+    width: 50px;
   }
 }
