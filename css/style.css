@@ -722,13 +722,16 @@ button {
   color: #ffffff;
   padding: 19px 46px 18px;
   box-sizing: border-box;
-  transition: transform 0.3s linear, background 0.2s linear, color 0.2s linear;
+  transition: transform 0.3s linear, background 0.2s linear, color 0.2s linear,
+    border 0.2s linear;
+  border: 1px solid transparent;
 }
 
 .our_latest_projects__button_bottom:hover {
   transform: scale(1.5);
   background: #ffffff;
   color: #988574;
+  border: 1px solid #988574;
 }
 
 .our_latest_projects__button_bottom:active {
@@ -982,6 +985,7 @@ button {
 
 .recent_posts__cards_box__card:hover {
   background: #352f2d;
+  cursor: help;
 }
 
 .recent_posts__cards_box__card__spec {
@@ -1010,11 +1014,22 @@ button {
   background-color: #352f2d99;
 }
 
+.recent_posts__cards_box__card:active
+  .recent_posts__cards_box__card__spec__overlay {
+  background-color: transparent;
+}
+
 .recent_posts__cards_box__card__spec__overlay__calendar {
   width: 50px;
   height: 59px;
   margin-top: 17px;
   margin-left: 23px;
+  transition: transform 0.5s linear;
+}
+
+.recent_posts__cards_box__card:active
+  .recent_posts__cards_box__card__spec__overlay__calendar {
+  transform: scale(0);
 }
 
 .recent_posts__cards_box__card__spec__overlay__calendar__number {
@@ -1149,7 +1164,7 @@ button {
 
 .partners__box__img:hover {
   transform: scale(1.7);
-  cursor: pointer;
+  cursor: grab;
 }
 
 .partners__box__img:active {
@@ -1226,7 +1241,7 @@ button {
 }
 
 .footer__top__wrapper__column__link:hover {
-  color: #0000ff;
+  color: #c7b299;
   text-decoration: underline;
 }
 
@@ -1237,7 +1252,7 @@ button {
 
 .footer__top__wrapper__column__link:hover
   .footer__top__wrapper__column__link__triangle {
-  fill: #0000ff;
+  fill: #c7b299;
 }
 
 .footer__top__wrapper__column__title {
@@ -1990,6 +2005,354 @@ button {
   }
 }
 
+@media (max-width: 280px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header__head {
+    row-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .header__text {
+    margin-bottom: 15px;
+  }
+
+  .header__text__title_main {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .header__text__title_header {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header__text__description {
+    margin-bottom: 15px;
+  }
+
+  .header__text__button,
+  .purchase_now__center__buttom,
+  .our_latest_projects__button_bottom {
+    font-size: 7px;
+    line-height: 10px;
+    padding: 5px 15px;
+  }
+
+  .header__buttons_box {
+    width: auto;
+  }
+
+  .header__buttons_box__button {
+    width: 8px;
+    height: 8px;
+    margin: 0 1px;
+  }
+
+  .header__buttons_box__button:hover {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
+
+  .services {
+    padding: 20px;
+  }
+
+  .services_center {
+    grid-gap: 2px;
+  }
+
+  .services__box {
+    height: auto;
+    padding: 0 2px;
+  }
+
+  .services__box__img {
+    width: 24px;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .services__box__title_mini {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+
+  .services__box__paragraph {
+    font-size: 8px;
+    line-height: 11px;
+    margin-bottom: 15px;
+  }
+
+  .waxom_is_realization__title {
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+
+  .waxom_is_realization__paragraph {
+    font-size: 7px;
+    line-height: 10px;
+    margin-bottom: 20px;
+  }
+
+  .purchase_now {
+    padding: 20px;
+  }
+
+  .purchase_now__center__text__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .our_latest_projects {
+    padding: 20px;
+  }
+
+  .our_latest_projects__title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .our_latest_projects__paragraph {
+    margin-bottom: 20px;
+  }
+
+  .our_latest_projects__buttons_box {
+    justify-content: space-around;
+  }
+
+  .our_latest_projects__buttons_box__button {
+    width: 90px;
+    height: 24px;
+    font-size: 6px;
+    line-height: 9px;
+    margin-bottom: 5px;
+  }
+
+  .our_latest_projects__buttons_box__button {
+    width: 52.5px;
+  }
+
+  .our_latest_projects__cards_box__card {
+    width: 92px;
+    margin-bottom: 10px;
+  }
+
+  .our_latest_projects__cards_box__card__title_mini {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+  }
+
+  .our_latest_projects__cards_box__card__paragraph {
+    font-size: 8px;
+    line-height: 11px;
+    text-align: center;
+  }
+
+  .our_latest_projects__cards_box__card__triangle {
+    top: 55px;
+    left: 6px;
+  }
+
+  .video_presentation {
+    padding: 20px;
+  }
+
+  .video_presentation__center__button {
+    padding: 7px 7px 5px;
+    margin-bottom: 15px;
+  }
+
+  .video_presentation__center__button__img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .video_presentation__center__title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .video_presentation__center__paragraph {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .video_presentation__center__time {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .mobile_devices__center__img {
+    max-width: 50%;
+  }
+
+  .mobile_devices__center__text__title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .mobile_devices__center__text__paragraph {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 15px;
+  }
+
+  .mobile_devices__center__text__list {
+    margin-left: 5px;
+  }
+
+  .mobile_devices__center__text__list__item {
+    font-size: 10px;
+    line-height: 12px;
+    padding-left: 0;
+  }
+
+  .counters__center_card {
+    height: 150px;
+    padding: 10px 0;
+  }
+
+  .counters__center_card__paragraph {
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .recent_posts {
+    padding: 20px;
+  }
+
+  .recent_posts__title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .recent_posts__paragraph {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 15px;
+  }
+
+  .recent_posts__cards_box__card {
+    margin-bottom: 10px;
+  }
+
+  .recent_posts__cards_box__card__spec__overlay__calendar {
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .recent_posts__cards_box__card__spec__overlay__calendar__number {
+    width: auto;
+    height: auto;
+  }
+
+  .recent_posts__cards_box__card__spec__overlay__calendar__number__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .recent_posts__cards_box__card__spec__overlay__calendar__month {
+    width: auto;
+    height: auto;
+  }
+
+  .recent_posts__cards_box__card__spec__overlay__calendar__month__text {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .recent_posts__cards_box__card__title_mini {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .recent_posts__cards_box__card__paragraph {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .recent_posts__cards_box__card__know_more {
+    justify-content: flex-start;
+    margin-left: 2px;
+  }
+
+  .recent_posts__cards_box__card__know_more__text {
+    font-size: 11px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+
+  .partners__box {
+    grid-gap: 10px;
+  }
+
+  .partners__box__img {
+    width: 50px;
+  }
+
+  .footer__top__wrapper {
+    grid-gap: 10px;
+  }
+
+  .footer__top__wrapper__column__text {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+
+  .footer__top__wrapper__column__link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .footer__top__wrapper__column__title {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 15px 0;
+  }
+
+  .footer__top__wrapper__column__post__date,
+  .footer__top__wrapper__column__post__text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .footer__top__wrapper__column__line {
+    width: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .footer__top__wrapper__column__images_box__img {
+    width: 65px;
+    height: auto;
+  }
+
+  .footer__down {
+    padding: 10px 20px;
+  }
+
+  .footer__down__wrapper {
+    margin: 0;
+  }
+
+  .footer__down__wrapper__paragraph,
+  .footer__down__wrapper__link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
 @media (max-width: 225px) {
   .our_latest_projects__cards_box__card:active {
     transform: scale(1.05);
@@ -2000,6 +2363,6 @@ button {
   }
 
   .partners__box__img {
-    width: 50px;
+    width: 30px;
   }
 }
